@@ -32,8 +32,7 @@ def scrape_stripe(title, location):
                 list_of_jobs.append({
                     "job_title": job_title,
                     "job_link": link,
-                    "company": "stripe",
-                    "country": "Bengaluru",  # You may adjust this as needed
-                    "city": job_location  # You may adjust this as needed
+                    "company": "stripe", 
+                    "location": job_location 
                 })
     return list_of_jobs
