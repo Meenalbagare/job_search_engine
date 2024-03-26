@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup
 import requests
 import uuid
@@ -54,6 +53,7 @@ def scrape_deloitte(title, location):
             soup_bs4 = make_bs4_object(job.html)
             job_title = soup_bs4.find('a').text.strip()
             job_location = soup_bs4.find('span').text.strip()  # Assuming location is in a specific span
+            
             if title.lower() in job_title.lower() or location.lower() in job_location.lower():
                 link = soup_bs4.find('a')['href']
                 lst_with_data.append({
@@ -62,8 +62,8 @@ def scrape_deloitte(title, location):
                     "job_link": link,
                     "company": "Deloitte",
                     "country": location,  # Change as per actual data
-                    "location": job_location  # Use actual location data
-                    
+                    "location": job_location,  # Use actual location data
+                   
                 })
             
         page_jobs += 10
