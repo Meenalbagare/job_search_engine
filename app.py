@@ -14,11 +14,11 @@ def index():
 def search():
     title = request.form['title']
     location = request.form['location']
-    # deloitte_results = scrape_deloitte(title, location)
-    # stripe = scrape_stripe(title, location)
+    deloitte_results = scrape_deloitte(title, location)
+    stripe = scrape_stripe(title, location)
     sonicwall=scrape_sonicwall(title,location)
-    # all_results = deloitte_results+stripe+sonicwall
-    all_results=sonicwall
+    all_results = deloitte_results+stripe+sonicwall
+
     return render_template('results.html', results=all_results)
 
 if __name__ == '__main__':
