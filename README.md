@@ -8,7 +8,7 @@ Enable users to search and filter job listings based on different criteria.
 
 ## FUNCTIONALITIES:
 
-•	Web Scraping: Utilized web scraping techniques (using libraries like BeautifulSoup or Scrapy) to extract job details from designated web pages of Stripe, Deloitte, SonicWall, and Infosys.
+•	Web Scraping: Utilized web scraping techniques to extract job details from designated web pages of Stripe, Deloitte, SonicWall, and Infosys.
 •	Search and Filter: Developed functionalities to allow users to search and filter job listings by job title, company, location.
 •	Reporting: Generating comprehensive reports that summarize job postings from users search parameters including  company, location distribution, and job title along with the link to apply for the job.
 
